@@ -8,7 +8,6 @@
 
 import UIKit
 
-@IBDesignable
 final class FABButon: UIButton {
 
     @IBInspectable var iconImage: UIImage? {

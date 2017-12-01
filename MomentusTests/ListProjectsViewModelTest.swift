@@ -25,12 +25,13 @@ class ListProjectsViewModelTest: XCTestCase {
         sut = ListProjectsViewModel(listProjectsUseCase: ListProjectsUseCaseMock())
         disposeBag = DisposeBag()
     }
-    
+
     func test_shouldLoadProjects_whenViewWillAppear() {
         let viewWillAppear = testScheduler.createHotObservable([next(100, ())])
         let input = ListProjectsViewModel.Input(
             viewWillAppear: viewWillAppear.asDriverOnErrorJustComplete(),
-            pullToRefresh: Driver.empty()
+            pullToRefresh: Driver.empty(),
+            selectItemAtIndex: Driver.empty()
         )
         let output = sut.transform(input: input)
         let observer = testScheduler.createObserver(EquatableArray<Project>.self)
@@ -57,7 +58,8 @@ class ListProjectsViewModelTest: XCTestCase {
         let pullToRefresh = testScheduler.createHotObservable([next(100, ())])
         let input = ListProjectsViewModel.Input(
             viewWillAppear: Driver.empty(),
-            pullToRefresh: pullToRefresh.asDriverOnErrorJustComplete()
+            pullToRefresh: pullToRefresh.asDriverOnErrorJustComplete(),
+            selectItemAtIndex: Driver.empty()
         )
         let output = sut.transform(input: input)
         let observer = testScheduler.createObserver(EquatableArray<Project>.self)
@@ -75,6 +77,32 @@ class ListProjectsViewModelTest: XCTestCase {
         ]
         let expected = [
             next(100, EquatableArray(projects))
+        ]
+
+        XCTAssertEqual(observer.events, expected)
+    }
+
+    func test_shouldSelectCorretProject_whenItemSelected() {
+        let selectItemAtIndex = testScheduler.createHotObservable([
+                next(100, 0),
+                next(200, 2)
+            ])
+        let input = ListProjectsViewModel.Input(
+            viewWillAppear: Driver.just(()),
+            pullToRefresh: Driver.empty(),
+            selectItemAtIndex: selectItemAtIndex.asDriverOnErrorJustComplete()
+        )
+        let output = sut.transform(input: input)
+        let observer = testScheduler.createObserver(Project.self)
+        output.projectSelected
+            .drive(observer)
+            .disposed(by: disposeBag)
+
+        testScheduler.start()
+
+        let expected = [
+            next(100, Project(uid: "1", name: "Project 1", tasks: [])),
+            next(200, Project(uid: "3", name: "Project 3", tasks: []))
         ]
 
         XCTAssertEqual(observer.events, expected)

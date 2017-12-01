@@ -26,15 +26,18 @@ final class ListProjectsCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView?.refreshControl = refreshControl
         bindViewModel()
+
+        collectionView?.refreshControl = refreshControl
     }
 
     private func bindViewModel() {
         let input = ListProjectsViewModel.Input(
             viewWillAppear: rx.methodInvoked(#selector(UIViewController.viewWillAppear(_:))).asDriverOnErrorJustComplete().mapToVoid(),
-            pullToRefresh: refreshControl.rx.controlEvent(.valueChanged).asDriver()
+            pullToRefresh: refreshControl.rx.controlEvent(.valueChanged).asDriver(),
+            selectItemAtIndex: collectionView!.rx.itemSelected.map { $0.row }.asDriverOnErrorJustComplete()
         )
+
         let output = viewModel.transform(input: input)
 
         output.projects
@@ -46,6 +49,11 @@ final class ListProjectsCollectionViewController: UICollectionViewController {
                 return cell
             }
             .disposed(by: disposeBag)
+
+        output.projectSelected
+            .drive(onNext: { project in
+                print(project.name)
+            }).disposed(by: disposeBag)
     }
 
 }

@@ -14,9 +14,11 @@ struct ListProjectsViewModel: ViewModelType {
     struct Input {
         let viewWillAppear: Driver<Void>
         let pullToRefresh: Driver<Void>
+        let selectItemAtIndex: Driver<Int>
     }
     struct Output {
         let projects: Driver<[Project]>
+        let projectSelected: Driver<Project>
     }
 
     private let listProjectsUseCase: ListProjectsUseCaseProvider
@@ -31,6 +33,14 @@ struct ListProjectsViewModel: ViewModelType {
                 return self.listProjectsUseCase.loadAllProjects()
                     .asDriverOnErrorJustComplete()
         }
-        return Output(projects: projects)
+
+        let projectSelected = input.selectItemAtIndex.withLatestFrom(projects) { (index, projects) -> Project in
+            return projects[index]
+        }
+
+        return Output(
+            projects: projects,
+            projectSelected: projectSelected
+        )
     }
 }
