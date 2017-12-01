@@ -66,20 +66,20 @@ final class CreateProjectViewController: UIViewController {
         let output = viewModel.transform(input: input)
 
         output.nameTextFieldBecomeFirstResponder
-            .drive(onNext: { _ in
+            .drive(onNext: { [unowned self] _ in
                 self.projectNameTextField.becomeFirstResponder()
             })
             .disposed(by: disposeBag)
 
         output.isConfirmButtonEnabled
-            .drive(onNext: { isEnabled in
+            .drive(onNext: { [unowned self] isEnabled in
                 self.confirmButton.isEnabled = isEnabled
                 self.confirmButton.alpha = isEnabled ? 1 : 0.2
             })
             .disposed(by: disposeBag)
 
         output.projectCreated
-            .drive(onNext: { _ in
+            .drive(onNext: { [unowned self] _ in
                 self.projectNameTextField.text = nil
                 self.projectNameTextField.sendActions(for: .editingChanged) // need to call sendActions because assigning manually to the text property doesn't trigger the actions.
                 self.showAnimatedMessage("Project created :)")
