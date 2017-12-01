@@ -14,3 +14,9 @@ struct Project {
     let tasks: [Task]
 }
 
+extension Project: Equatable {
+    static func ==(lhs: Project, rhs: Project) -> Bool {
+        return lhs.uid == rhs.uid
+    }
+}
+

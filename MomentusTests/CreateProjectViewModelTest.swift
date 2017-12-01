@@ -20,6 +20,7 @@ class CreateProjectViewModelTest: XCTestCase {
     var disposeBag: DisposeBag!
 
     override func setUp() {
+        super.setUp()
         testScheduler = TestScheduler(initialClock: 0)
         sut = CreateProjectViewModel(useCase: CreateProjectUseCaseMock())
         disposeBag = DisposeBag()
