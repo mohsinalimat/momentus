@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EQs-hb-g49">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Create Project View Controller-->
+        <scene sceneID="cwp-VH-QfG">
+            <objects>
+                <viewController id="EQs-hb-g49" customClass="CreateProjectViewController" customModule="Momentus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6CQ-BW-fFI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Project name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pZJ-PE-ahu">
+                                <rect key="frame" x="24" y="68" width="327" height="39"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kga-so-Ahn" customClass="FABButon" customModule="Momentus" customModuleProvider="target">
+                                <rect key="frame" x="279" y="585" width="64" height="50"/>
+                                <state key="normal" image="ic_check_white"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pZJ-PE-ahu" firstAttribute="top" secondItem="mM6-dv-vQA" secondAttribute="top" constant="48" id="08w-nK-2RD"/>
+                            <constraint firstItem="pZJ-PE-ahu" firstAttribute="leading" secondItem="mM6-dv-vQA" secondAttribute="leading" constant="24" id="Jv9-Ne-Y5m"/>
+                            <constraint firstItem="mM6-dv-vQA" firstAttribute="trailing" secondItem="pZJ-PE-ahu" secondAttribute="trailing" constant="24" id="Mms-My-uI2"/>
+                            <constraint firstItem="mM6-dv-vQA" firstAttribute="trailing" secondItem="kga-so-Ahn" secondAttribute="trailing" constant="32" id="jhL-dK-7Oy"/>
+                            <constraint firstItem="mM6-dv-vQA" firstAttribute="bottom" secondItem="kga-so-Ahn" secondAttribute="bottom" constant="32" id="khA-yR-ryl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mM6-dv-vQA"/>
+                    </view>
+                    <connections>
+                        <outlet property="confirmButton" destination="kga-so-Ahn" id="hnf-eb-Y3t"/>
+                        <outlet property="confirmButtonBottomConstraint" destination="khA-yR-ryl" id="WpZ-3A-FPb"/>
+                        <outlet property="projectNameTextField" destination="pZJ-PE-ahu" id="FdS-Rk-MLk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="apm-7b-k9Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-74.400000000000006" y="146.17691154422789"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_check_white" width="64" height="50"/>
+    </resources>
+</document>

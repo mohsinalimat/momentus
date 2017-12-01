@@ -8,11 +8,43 @@
 
 /* Begin PBXBuildFile section */
 		1879A4011FD16DA3008144B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4001FD16DA3008144B2 /* AppDelegate.swift */; };
-		1879A4031FD16DA3008144B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4021FD16DA3008144B2 /* ViewController.swift */; };
 		1879A4061FD16DA3008144B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1879A4041FD16DA3008144B2 /* Main.storyboard */; };
 		1879A4081FD16DA3008144B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1879A4071FD16DA3008144B2 /* Assets.xcassets */; };
 		1879A40B1FD16DA3008144B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1879A4091FD16DA3008144B2 /* LaunchScreen.storyboard */; };
-		1879A4161FD16DA3008144B2 /* MomentusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4151FD16DA3008144B2 /* MomentusTests.swift */; };
+		1879A4231FD16F06008144B2 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1879A4211FD16F06008144B2 /* RealmSwift.framework */; };
+		1879A4241FD16F06008144B2 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1879A4221FD16F06008144B2 /* Realm.framework */; };
+		1879A4281FD16F7E008144B2 /* RMProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4271FD16F7E008144B2 /* RMProject.swift */; };
+		1879A42A1FD1702B008144B2 /* RMTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4291FD1702B008144B2 /* RMTask.swift */; };
+		1879A42C1FD170BB008144B2 /* RMTimeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A42B1FD170BB008144B2 /* RMTimeEntry.swift */; };
+		1879A4301FD17461008144B2 /* RunLoopThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A42F1FD17461008144B2 /* RunLoopThreadScheduler.swift */; };
+		1879A4341FD174B6008144B2 /* RxRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1879A4311FD174B6008144B2 /* RxRealm.framework */; };
+		1879A4351FD174B6008144B2 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1879A4321FD174B6008144B2 /* RxSwift.framework */; };
+		1879A4361FD174B6008144B2 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1879A4331FD174B6008144B2 /* RxCocoa.framework */; };
+		1879A43A1FD1755D008144B2 /* Observable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4391FD1755D008144B2 /* Observable+Ext.swift */; };
+		1879A43C1FD1757A008144B2 /* Realm+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A43B1FD1757A008144B2 /* Realm+Ext.swift */; };
+		1879A43F1FD175A7008144B2 /* DomainConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A43E1FD175A7008144B2 /* DomainConvertibleType.swift */; };
+		1879A4411FD175B6008144B2 /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4401FD175B6008144B2 /* RealmRepresentable.swift */; };
+		1879A4431FD175F3008144B2 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4421FD175F3008144B2 /* Repository.swift */; };
+		1879A4461FD17622008144B2 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4451FD17622008144B2 /* Project.swift */; };
+		1879A4481FD17635008144B2 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4471FD17635008144B2 /* Task.swift */; };
+		1879A44A1FD17641008144B2 /* TimeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4491FD17641008144B2 /* TimeEntry.swift */; };
+		1879A44D1FD17E1A008144B2 /* CreateProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A44C1FD17E1A008144B2 /* CreateProjectViewController.swift */; };
+		1879A44F1FD17E25008144B2 /* CreateProject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1879A44E1FD17E25008144B2 /* CreateProject.storyboard */; };
+		1879A4511FD1804A008144B2 /* FABButon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4501FD1804A008144B2 /* FABButon.swift */; };
+		1879A4531FD1820F008144B2 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4521FD1820F008144B2 /* UIStoryboard.swift */; };
+		1879A4551FD18463008144B2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4541FD18463008144B2 /* RootViewController.swift */; };
+		1879A4591FD1893A008144B2 /* CreateProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4581FD1893A008144B2 /* CreateProjectViewModel.swift */; };
+		1879A45B1FD18AA4008144B2 /* Rx+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A45A1FD18AA4008144B2 /* Rx+Util.swift */; };
+		1879A45D1FD19339008144B2 /* CreateProjectUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A45C1FD19339008144B2 /* CreateProjectUseCase.swift */; };
+		1879A45F1FD1A0EA008144B2 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A45E1FD1A0EA008144B2 /* ViewModelType.swift */; };
+		1879A4621FD1A20F008144B2 /* CreateProjectViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4611FD1A20F008144B2 /* CreateProjectViewModelTest.swift */; };
+		1879A4661FD1A37C008144B2 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1879A4631FD1A37C008144B2 /* RxTest.framework */; };
+		1879A4671FD1A37C008144B2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1879A4641FD1A37C008144B2 /* Nimble.framework */; };
+		1879A4681FD1A37C008144B2 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1879A4651FD1A37C008144B2 /* Quick.framework */; };
+		1879A46A1FD1A39B008144B2 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1879A4641FD1A37C008144B2 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1879A46B1FD1A39B008144B2 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1879A4651FD1A37C008144B2 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1879A46C1FD1A39B008144B2 /* RxTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1879A4631FD1A37C008144B2 /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1879A46E1FD1A430008144B2 /* CreateProjectUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A46D1FD1A430008144B2 /* CreateProjectUseCaseMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,17 +57,61 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1879A4691FD1A380008144B2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1879A46A1FD1A39B008144B2 /* Nimble.framework in CopyFiles */,
+				1879A46B1FD1A39B008144B2 /* Quick.framework in CopyFiles */,
+				1879A46C1FD1A39B008144B2 /* RxTest.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1879A3FD1FD16DA3008144B2 /* Momentus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Momentus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1879A4001FD16DA3008144B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1879A4021FD16DA3008144B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1879A4051FD16DA3008144B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1879A4071FD16DA3008144B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1879A40A1FD16DA3008144B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1879A40C1FD16DA3008144B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1879A4111FD16DA3008144B2 /* MomentusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MomentusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1879A4151FD16DA3008144B2 /* MomentusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentusTests.swift; sourceTree = "<group>"; };
 		1879A4171FD16DA3008144B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1879A4211FD16F06008144B2 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		1879A4221FD16F06008144B2 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		1879A4271FD16F7E008144B2 /* RMProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMProject.swift; sourceTree = "<group>"; };
+		1879A4291FD1702B008144B2 /* RMTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMTask.swift; sourceTree = "<group>"; };
+		1879A42B1FD170BB008144B2 /* RMTimeEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMTimeEntry.swift; sourceTree = "<group>"; };
+		1879A42F1FD17461008144B2 /* RunLoopThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopThreadScheduler.swift; sourceTree = "<group>"; };
+		1879A4311FD174B6008144B2 /* RxRealm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRealm.framework; path = Carthage/Build/iOS/RxRealm.framework; sourceTree = "<group>"; };
+		1879A4321FD174B6008144B2 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		1879A4331FD174B6008144B2 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		1879A4391FD1755D008144B2 /* Observable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Ext.swift"; sourceTree = "<group>"; };
+		1879A43B1FD1757A008144B2 /* Realm+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Ext.swift"; sourceTree = "<group>"; };
+		1879A43E1FD175A7008144B2 /* DomainConvertibleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainConvertibleType.swift; sourceTree = "<group>"; };
+		1879A4401FD175B6008144B2 /* RealmRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
+		1879A4421FD175F3008144B2 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		1879A4451FD17622008144B2 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		1879A4471FD17635008144B2 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		1879A4491FD17641008144B2 /* TimeEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeEntry.swift; sourceTree = "<group>"; };
+		1879A44C1FD17E1A008144B2 /* CreateProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectViewController.swift; sourceTree = "<group>"; };
+		1879A44E1FD17E25008144B2 /* CreateProject.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateProject.storyboard; sourceTree = "<group>"; };
+		1879A4501FD1804A008144B2 /* FABButon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FABButon.swift; sourceTree = "<group>"; };
+		1879A4521FD1820F008144B2 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
+		1879A4541FD18463008144B2 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		1879A4581FD1893A008144B2 /* CreateProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectViewModel.swift; sourceTree = "<group>"; };
+		1879A45A1FD18AA4008144B2 /* Rx+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Util.swift"; sourceTree = "<group>"; };
+		1879A45C1FD19339008144B2 /* CreateProjectUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectUseCase.swift; sourceTree = "<group>"; };
+		1879A45E1FD1A0EA008144B2 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		1879A4611FD1A20F008144B2 /* CreateProjectViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectViewModelTest.swift; sourceTree = "<group>"; };
+		1879A4631FD1A37C008144B2 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		1879A4641FD1A37C008144B2 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		1879A4651FD1A37C008144B2 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		1879A46D1FD1A430008144B2 /* CreateProjectUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectUseCaseMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +119,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1879A4231FD16F06008144B2 /* RealmSwift.framework in Frameworks */,
+				1879A4241FD16F06008144B2 /* Realm.framework in Frameworks */,
+				1879A4341FD174B6008144B2 /* RxRealm.framework in Frameworks */,
+				1879A4351FD174B6008144B2 /* RxSwift.framework in Frameworks */,
+				1879A4361FD174B6008144B2 /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +131,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1879A4661FD1A37C008144B2 /* RxTest.framework in Frameworks */,
+				1879A4671FD1A37C008144B2 /* Nimble.framework in Frameworks */,
+				1879A4681FD1A37C008144B2 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +146,7 @@
 				1879A3FF1FD16DA3008144B2 /* Momentus */,
 				1879A4141FD16DA3008144B2 /* MomentusTests */,
 				1879A3FE1FD16DA3008144B2 /* Products */,
+				1879A4201FD16F06008144B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,11 +163,18 @@
 			isa = PBXGroup;
 			children = (
 				1879A4001FD16DA3008144B2 /* AppDelegate.swift */,
-				1879A4021FD16DA3008144B2 /* ViewController.swift */,
-				1879A4041FD16DA3008144B2 /* Main.storyboard */,
 				1879A4071FD16DA3008144B2 /* Assets.xcassets */,
-				1879A4091FD16DA3008144B2 /* LaunchScreen.storyboard */,
+				1879A4601FD1A0FD008144B2 /* Scenes */,
+				1879A4441FD17619008144B2 /* Domain */,
+				1879A4501FD1804A008144B2 /* FABButon.swift */,
 				1879A40C1FD16DA3008144B2 /* Info.plist */,
+				1879A4091FD16DA3008144B2 /* LaunchScreen.storyboard */,
+				1879A4041FD16DA3008144B2 /* Main.storyboard */,
+				1879A42D1FD17442008144B2 /* Repository */,
+				1879A4541FD18463008144B2 /* RootViewController.swift */,
+				1879A45A1FD18AA4008144B2 /* Rx+Util.swift */,
+				1879A4521FD1820F008144B2 /* UIStoryboard.swift */,
+				1879A45E1FD1A0EA008144B2 /* ViewModelType.swift */,
 			);
 			path = Momentus;
 			sourceTree = "<group>";
@@ -90,10 +182,111 @@
 		1879A4141FD16DA3008144B2 /* MomentusTests */ = {
 			isa = PBXGroup;
 			children = (
-				1879A4151FD16DA3008144B2 /* MomentusTests.swift */,
 				1879A4171FD16DA3008144B2 /* Info.plist */,
+				1879A4611FD1A20F008144B2 /* CreateProjectViewModelTest.swift */,
+				1879A46D1FD1A430008144B2 /* CreateProjectUseCaseMock.swift */,
 			);
 			path = MomentusTests;
+			sourceTree = "<group>";
+		};
+		1879A4201FD16F06008144B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1879A4641FD1A37C008144B2 /* Nimble.framework */,
+				1879A4651FD1A37C008144B2 /* Quick.framework */,
+				1879A4631FD1A37C008144B2 /* RxTest.framework */,
+				1879A4331FD174B6008144B2 /* RxCocoa.framework */,
+				1879A4311FD174B6008144B2 /* RxRealm.framework */,
+				1879A4321FD174B6008144B2 /* RxSwift.framework */,
+				1879A4221FD16F06008144B2 /* Realm.framework */,
+				1879A4211FD16F06008144B2 /* RealmSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1879A4261FD16F6A008144B2 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				1879A43D1FD17596008144B2 /* Convertions */,
+				1879A4271FD16F7E008144B2 /* RMProject.swift */,
+				1879A4291FD1702B008144B2 /* RMTask.swift */,
+				1879A42B1FD170BB008144B2 /* RMTimeEntry.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		1879A42D1FD17442008144B2 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				1879A4371FD17544008144B2 /* Utilities */,
+				1879A4261FD16F6A008144B2 /* Entities */,
+				1879A4421FD175F3008144B2 /* Repository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		1879A42E1FD17450008144B2 /* RxUnits */ = {
+			isa = PBXGroup;
+			children = (
+				1879A42F1FD17461008144B2 /* RunLoopThreadScheduler.swift */,
+			);
+			path = RxUnits;
+			sourceTree = "<group>";
+		};
+		1879A4371FD17544008144B2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1879A4381FD17551008144B2 /* Extensions */,
+				1879A42E1FD17450008144B2 /* RxUnits */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1879A4381FD17551008144B2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1879A4391FD1755D008144B2 /* Observable+Ext.swift */,
+				1879A43B1FD1757A008144B2 /* Realm+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1879A43D1FD17596008144B2 /* Convertions */ = {
+			isa = PBXGroup;
+			children = (
+				1879A43E1FD175A7008144B2 /* DomainConvertibleType.swift */,
+				1879A4401FD175B6008144B2 /* RealmRepresentable.swift */,
+			);
+			path = Convertions;
+			sourceTree = "<group>";
+		};
+		1879A4441FD17619008144B2 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				1879A4451FD17622008144B2 /* Project.swift */,
+				1879A4471FD17635008144B2 /* Task.swift */,
+				1879A4491FD17641008144B2 /* TimeEntry.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		1879A44B1FD17E02008144B2 /* CreateProject */ = {
+			isa = PBXGroup;
+			children = (
+				1879A44C1FD17E1A008144B2 /* CreateProjectViewController.swift */,
+				1879A44E1FD17E25008144B2 /* CreateProject.storyboard */,
+				1879A4581FD1893A008144B2 /* CreateProjectViewModel.swift */,
+				1879A45C1FD19339008144B2 /* CreateProjectUseCase.swift */,
+			);
+			path = CreateProject;
+			sourceTree = "<group>";
+		};
+		1879A4601FD1A0FD008144B2 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				1879A44B1FD17E02008144B2 /* CreateProject */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,6 +299,7 @@
 				1879A3F91FD16DA3008144B2 /* Sources */,
 				1879A3FA1FD16DA3008144B2 /* Frameworks */,
 				1879A3FB1FD16DA3008144B2 /* Resources */,
+				1879A4251FD16F16008144B2 /* Copy Carthage Frameworkds */,
 			);
 			buildRules = (
 			);
@@ -123,6 +317,7 @@
 				1879A40D1FD16DA3008144B2 /* Sources */,
 				1879A40E1FD16DA3008144B2 /* Frameworks */,
 				1879A40F1FD16DA3008144B2 /* Resources */,
+				1879A4691FD1A380008144B2 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -181,6 +376,7 @@
 			files = (
 				1879A40B1FD16DA3008144B2 /* LaunchScreen.storyboard in Resources */,
 				1879A4081FD16DA3008144B2 /* Assets.xcassets in Resources */,
+				1879A44F1FD17E25008144B2 /* CreateProject.storyboard in Resources */,
 				1879A4061FD16DA3008144B2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,13 +390,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1879A4251FD16F16008144B2 /* Copy Carthage Frameworkds */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxRealm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+			);
+			name = "Copy Carthage Frameworkds";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1879A3F91FD16DA3008144B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1879A4031FD16DA3008144B2 /* ViewController.swift in Sources */,
+				1879A4591FD1893A008144B2 /* CreateProjectViewModel.swift in Sources */,
+				1879A4411FD175B6008144B2 /* RealmRepresentable.swift in Sources */,
+				1879A4551FD18463008144B2 /* RootViewController.swift in Sources */,
+				1879A4281FD16F7E008144B2 /* RMProject.swift in Sources */,
+				1879A44D1FD17E1A008144B2 /* CreateProjectViewController.swift in Sources */,
+				1879A4301FD17461008144B2 /* RunLoopThreadScheduler.swift in Sources */,
+				1879A4531FD1820F008144B2 /* UIStoryboard.swift in Sources */,
+				1879A43C1FD1757A008144B2 /* Realm+Ext.swift in Sources */,
+				1879A45B1FD18AA4008144B2 /* Rx+Util.swift in Sources */,
+				1879A42A1FD1702B008144B2 /* RMTask.swift in Sources */,
+				1879A44A1FD17641008144B2 /* TimeEntry.swift in Sources */,
+				1879A4431FD175F3008144B2 /* Repository.swift in Sources */,
+				1879A43F1FD175A7008144B2 /* DomainConvertibleType.swift in Sources */,
+				1879A4481FD17635008144B2 /* Task.swift in Sources */,
+				1879A42C1FD170BB008144B2 /* RMTimeEntry.swift in Sources */,
+				1879A43A1FD1755D008144B2 /* Observable+Ext.swift in Sources */,
 				1879A4011FD16DA3008144B2 /* AppDelegate.swift in Sources */,
+				1879A45D1FD19339008144B2 /* CreateProjectUseCase.swift in Sources */,
+				1879A4461FD17622008144B2 /* Project.swift in Sources */,
+				1879A4511FD1804A008144B2 /* FABButon.swift in Sources */,
+				1879A45F1FD1A0EA008144B2 /* ViewModelType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +445,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1879A4161FD16DA3008144B2 /* MomentusTests.swift in Sources */,
+				1879A4621FD1A20F008144B2 /* CreateProjectViewModelTest.swift in Sources */,
+				1879A46E1FD1A430008144B2 /* CreateProjectUseCaseMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +593,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ELTTE7K8TT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Momentus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grsouza.Momentus;
@@ -370,6 +612,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ELTTE7K8TT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Momentus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grsouza.Momentus;
@@ -386,6 +632,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ELTTE7K8TT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MomentusTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grsouza.MomentusTests;
@@ -403,6 +653,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ELTTE7K8TT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MomentusTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grsouza.MomentusTests;
