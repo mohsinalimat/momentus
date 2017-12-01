@@ -30,7 +30,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kga-so-Ahn" customClass="FABButon" customModule="Momentus" customModuleProvider="target">
-                                <rect key="frame" x="279" y="585" width="64" height="50"/>
+                                <rect key="frame" x="279" y="571" width="64" height="64"/>
                                 <state key="normal" image="ic_check_white"/>
                             </button>
                         </subviews>

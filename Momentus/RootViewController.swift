@@ -14,8 +14,9 @@ final class RootViewController: UINavigationController {
         super.viewDidLoad()
 
         let createProjectViewController = CreateProjectViewController.instantiate()
+        let listProjectsViewController = ListProjectsCollectionViewController.instantiate()
 
-        setViewControllers([createProjectViewController], animated: false)
+        setViewControllers([listProjectsViewController], animated: false)
     }
 
 }

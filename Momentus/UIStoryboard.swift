@@ -10,4 +10,5 @@ import UIKit
 
 extension UIStoryboard {
     static let createProject = UIStoryboard(name: "CreateProject", bundle: nil)
+    static let listProjects = UIStoryboard(name: "ListProjects", bundle: nil)
 }

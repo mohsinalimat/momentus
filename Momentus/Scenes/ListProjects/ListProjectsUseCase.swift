@@ -12,3 +12,12 @@ import RxSwift
 protocol ListProjectsUseCaseProvider {
     func loadAllProjects() -> Observable<[Project]>
 }
+
+struct ListProjectsUseCase: ListProjectsUseCaseProvider {
+
+    private let repository = Repository<Project>()
+
+    func loadAllProjects() -> Observable<[Project]> {
+        return repository.queryAll()
+    }
+}

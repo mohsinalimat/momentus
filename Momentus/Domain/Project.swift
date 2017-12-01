@@ -12,6 +12,10 @@ struct Project {
     let uid: String
     let name: String
     let tasks: [Task]
+
+    var totalDuration: TimeInterval {
+        return tasks.reduce(0) { $0 + $1.totalDuration }
+    }
 }
 
 extension Project: Equatable {

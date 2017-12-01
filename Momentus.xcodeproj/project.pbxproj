@@ -13,6 +13,9 @@
 		18290E7D1FD1B36D001DAA6F /* ListProjectsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18290E7C1FD1B36D001DAA6F /* ListProjectsViewModelTest.swift */; };
 		18290E7F1FD1B3D2001DAA6F /* ListProjectsUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18290E7E1FD1B3D2001DAA6F /* ListProjectsUseCaseMock.swift */; };
 		18290E811FD1B7FE001DAA6F /* EquatableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18290E801FD1B7FE001DAA6F /* EquatableArray.swift */; };
+		18290E831FD1CC2E001DAA6F /* ListProjects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18290E821FD1CC2E001DAA6F /* ListProjects.storyboard */; };
+		18290E851FD1CC81001DAA6F /* ListProjectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18290E841FD1CC81001DAA6F /* ListProjectCollectionViewCell.swift */; };
+		18290E881FD1D34B001DAA6F /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18290E871FD1D34B001DAA6F /* Reusable.swift */; };
 		1879A4011FD16DA3008144B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4001FD16DA3008144B2 /* AppDelegate.swift */; };
 		1879A4061FD16DA3008144B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1879A4041FD16DA3008144B2 /* Main.storyboard */; };
 		1879A4081FD16DA3008144B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1879A4071FD16DA3008144B2 /* Assets.xcassets */; };
@@ -85,6 +88,9 @@
 		18290E7C1FD1B36D001DAA6F /* ListProjectsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProjectsViewModelTest.swift; sourceTree = "<group>"; };
 		18290E7E1FD1B3D2001DAA6F /* ListProjectsUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProjectsUseCaseMock.swift; sourceTree = "<group>"; };
 		18290E801FD1B7FE001DAA6F /* EquatableArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquatableArray.swift; sourceTree = "<group>"; };
+		18290E821FD1CC2E001DAA6F /* ListProjects.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListProjects.storyboard; sourceTree = "<group>"; };
+		18290E841FD1CC81001DAA6F /* ListProjectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProjectCollectionViewCell.swift; sourceTree = "<group>"; };
+		18290E871FD1D34B001DAA6F /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		1879A3FD1FD16DA3008144B2 /* Momentus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Momentus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1879A4001FD16DA3008144B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1879A4051FD16DA3008144B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -158,6 +164,8 @@
 				18290E761FD1B26E001DAA6F /* ListProjectsCollectionViewController.swift */,
 				18290E781FD1B2D4001DAA6F /* ListProjectsViewModel.swift */,
 				18290E7A1FD1B2DF001DAA6F /* ListProjectsUseCase.swift */,
+				18290E821FD1CC2E001DAA6F /* ListProjects.storyboard */,
+				18290E841FD1CC81001DAA6F /* ListProjectCollectionViewCell.swift */,
 			);
 			path = ListProjects;
 			sourceTree = "<group>";
@@ -197,6 +205,7 @@
 				1879A45A1FD18AA4008144B2 /* Rx+Util.swift */,
 				1879A4521FD1820F008144B2 /* UIStoryboard.swift */,
 				1879A45E1FD1A0EA008144B2 /* ViewModelType.swift */,
+				18290E871FD1D34B001DAA6F /* Reusable.swift */,
 			);
 			path = Momentus;
 			sourceTree = "<group>";
@@ -344,6 +353,7 @@
 				1879A40E1FD16DA3008144B2 /* Frameworks */,
 				1879A40F1FD16DA3008144B2 /* Resources */,
 				1879A4691FD1A380008144B2 /* CopyFiles */,
+				18290E861FD1D31E001DAA6F /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -400,6 +410,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18290E831FD1CC2E001DAA6F /* ListProjects.storyboard in Resources */,
 				1879A40B1FD16DA3008144B2 /* LaunchScreen.storyboard in Resources */,
 				1879A4081FD16DA3008144B2 /* Assets.xcassets in Resources */,
 				1879A44F1FD17E25008144B2 /* CreateProject.storyboard in Resources */,
@@ -417,6 +428,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		18290E861FD1D31E001DAA6F /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
 		1879A4251FD16F16008144B2 /* Copy Carthage Frameworkds */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -449,6 +474,7 @@
 				1879A4551FD18463008144B2 /* RootViewController.swift in Sources */,
 				1879A4281FD16F7E008144B2 /* RMProject.swift in Sources */,
 				1879A44D1FD17E1A008144B2 /* CreateProjectViewController.swift in Sources */,
+				18290E881FD1D34B001DAA6F /* Reusable.swift in Sources */,
 				1879A4301FD17461008144B2 /* RunLoopThreadScheduler.swift in Sources */,
 				1879A4531FD1820F008144B2 /* UIStoryboard.swift in Sources */,
 				1879A43C1FD1757A008144B2 /* Realm+Ext.swift in Sources */,
@@ -456,6 +482,7 @@
 				1879A42A1FD1702B008144B2 /* RMTask.swift in Sources */,
 				18290E7B1FD1B2DF001DAA6F /* ListProjectsUseCase.swift in Sources */,
 				1879A44A1FD17641008144B2 /* TimeEntry.swift in Sources */,
+				18290E851FD1CC81001DAA6F /* ListProjectCollectionViewCell.swift in Sources */,
 				1879A4431FD175F3008144B2 /* Repository.swift in Sources */,
 				1879A43F1FD175A7008144B2 /* DomainConvertibleType.swift in Sources */,
 				1879A4481FD17635008144B2 /* Task.swift in Sources */,

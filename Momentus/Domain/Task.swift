@@ -12,4 +12,8 @@ struct Task {
     let uid: String
     let title: String
     let timeEntries: [TimeEntry]
+
+    var totalDuration: TimeInterval {
+        return timeEntries.reduce(0) { $0 + $1.duration }
+    }
 }
