@@ -14,13 +14,13 @@ struct CreateProjectViewModel: ViewModelType {
     struct Input {
         let confirmTapped: Driver<Void>
         let viewDidAppear: Driver<Void>
-
         let projectName: Driver<String>
     }
 
     struct Output {
         let nameTextFieldBecomeFirstResponder: Driver<Void>
         let projectCreated: Driver<Void>
+        let isConfirmButtonEnabled: Driver<Bool>
     }
 
     private let useCase: CreateProjectUseCaseProvider
@@ -31,6 +31,7 @@ struct CreateProjectViewModel: ViewModelType {
 
     func transform(input: CreateProjectViewModel.Input) -> CreateProjectViewModel.Output {
         let nameTextFieldBecomeFirstResponder = input.viewDidAppear
+        let isConfirmButtonEnabled = input.projectName.map(validateName)
         let projectCreated = input.confirmTapped.withLatestFrom(input.projectName)
             .flatMapLatest { name in
                 return self.useCase.createProject(name: name)
@@ -40,8 +41,12 @@ struct CreateProjectViewModel: ViewModelType {
 
         return Output(
             nameTextFieldBecomeFirstResponder: nameTextFieldBecomeFirstResponder,
-            projectCreated: projectCreated
+            projectCreated: projectCreated,
+            isConfirmButtonEnabled: isConfirmButtonEnabled
         )
     }
 
+    private func validateName(_ name: String) -> Bool {
+        return !name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+    }
 }

@@ -71,4 +71,47 @@ class CreateProjectViewModelTest: XCTestCase {
         XCTAssertEqual(observer.events.count, expected.count)
     }
 
+    func test_confirmButtonShouldBeDisabled_whenProjectNameIsInvalid() {
+        let projectName = testScheduler.createHotObservable([next(100, "           ")])
+        let input = CreateProjectViewModel.Input(
+            confirmTapped: Driver.empty(),
+            viewDidAppear: Driver.empty(),
+            projectName: projectName.asDriverOnErrorJustComplete()
+        )
+        let output = sut.transform(input: input)
+        let observer = testScheduler.createObserver(Bool.self)
+        output.isConfirmButtonEnabled
+            .drive(observer)
+            .disposed(by: disposeBag)
+
+        testScheduler.start()
+
+        let expected = [
+            next(100, false)
+        ]
+
+        XCTAssertEqual(observer.events, expected)
+    }
+
+    func test_confirmButtonShouldBeEnabled_whenProjectNameIsValid() {
+        let projectName = testScheduler.createHotObservable([next(100, "Momentus App")])
+        let input = CreateProjectViewModel.Input(
+            confirmTapped: Driver.empty(),
+            viewDidAppear: Driver.empty(),
+            projectName: projectName.asDriverOnErrorJustComplete()
+        )
+        let output = sut.transform(input: input)
+        let observer = testScheduler.createObserver(Bool.self)
+        output.isConfirmButtonEnabled
+            .drive(observer)
+            .disposed(by: disposeBag)
+
+        testScheduler.start()
+
+        let expected = [
+            next(100, true)
+        ]
+
+        XCTAssertEqual(observer.events, expected)
+    }
 }

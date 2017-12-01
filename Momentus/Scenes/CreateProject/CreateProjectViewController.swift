@@ -46,6 +46,7 @@ final class CreateProjectViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        addTapGestureToView()
         addKeyboardNotifications()
         bindViewModel()
     }
@@ -73,6 +74,17 @@ final class CreateProjectViewController: UIViewController {
             })
             .disposed(by: disposeBag)
 
+    }
+
+    // MARK: View Tap Gesture
+
+    private func addTapGestureToView() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped(_:)))
+        view.addGestureRecognizer(tapGesture)
+    }
+
+    @objc private func viewTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true) // hide keyboard
     }
 
     // MARK: Keyboard Observer
