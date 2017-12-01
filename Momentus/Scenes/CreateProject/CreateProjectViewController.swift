@@ -12,6 +12,8 @@ import RxSwift
 final class CreateProjectViewController: UIViewController {
 
     private enum Constants {
+        static let messageAnimationDuration: TimeInterval = 0.5
+        static let messageShowingStateDuration: TimeInterval = 2
         static let defaultConfirmButtonBottomMargin: CGFloat = 32
     }
 
@@ -20,6 +22,7 @@ final class CreateProjectViewController: UIViewController {
     @IBOutlet private weak var projectNameTextField: UITextField!
     @IBOutlet private weak var confirmButton: FABButon!
     @IBOutlet private weak var confirmButtonBottomConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var messageLabel: UILabel!
 
     // MARK: Private properties
 
@@ -68,12 +71,33 @@ final class CreateProjectViewController: UIViewController {
             })
             .disposed(by: disposeBag)
 
-        output.projectCreated
-            .drive(onNext: { _ in
-                print("Project created")
+        output.isConfirmButtonEnabled
+            .drive(onNext: { isEnabled in
+                self.confirmButton.isEnabled = isEnabled
+                self.confirmButton.alpha = isEnabled ? 1 : 0.2
             })
             .disposed(by: disposeBag)
 
+        output.projectCreated
+            .drive(onNext: { _ in
+                self.projectNameTextField.text = nil
+                self.projectNameTextField.sendActions(for: .editingChanged) // need to call sendActions because assigning manually to the text property doesn't trigger the actions.
+                self.showAnimatedMessage("Project created :)")
+            })
+            .disposed(by: disposeBag)
+
+    }
+
+    private func showAnimatedMessage(_ message: String) {
+        UIView.animate(withDuration: Constants.messageAnimationDuration, animations: {
+            self.messageLabel.alpha = 1
+            self.messageLabel.text = message
+        }, completion: { _ in
+            DispatchQueue.main.asyncAfter(deadline: .now() + Constants.messageShowingStateDuration) {
+                self.messageLabel.alpha = 0
+                self.messageLabel.text = ""
+            }
+        })
     }
 
     // MARK: View Tap Gesture

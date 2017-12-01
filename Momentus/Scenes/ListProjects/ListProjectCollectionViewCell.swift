@@ -9,11 +9,6 @@
 import UIKit
 
 final class ListProjectCollectionViewCell: UICollectionViewCell {
-//
-//    struct ViewModel {
-//        let name: String
-//        let time: Int
-//    }
 
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var timeLabel: UILabel!
@@ -41,11 +36,3 @@ final class ListProjectCollectionViewCell: UICollectionViewCell {
         return Int(hours)
     }
 }
-
-//extension ListProjectCollectionViewCell.ViewModel: Equatable {
-//    static func ==(lhs: ListProjectCollectionViewCell.ViewModel, rhs: ListProjectCollectionViewCell.ViewModel) -> Bool {
-//        return lhs.name == rhs.name &&
-//            lhs.time == rhs.time
-//    }
-//}
-

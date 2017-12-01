@@ -10,15 +10,6 @@ import UIKit
 
 final class FABButon: UIButton {
 
-    @IBInspectable var iconImage: UIImage? {
-        didSet {
-            setImage(iconImage, for: .normal)
-            setImage(iconImage, for: .highlighted)
-            setImage(iconImage, for: .selected)
-            setImage(iconImage, for: .disabled)
-        }
-    }
-
     override var intrinsicContentSize: CGSize {
         return CGSize(width: 64, height: 64)
     }
@@ -35,5 +26,4 @@ final class FABButon: UIButton {
         layer.shadowRadius = 5
         layer.shadowOpacity = 0.8
     }
-
 }

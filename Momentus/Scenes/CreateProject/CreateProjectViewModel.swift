@@ -34,7 +34,7 @@ struct CreateProjectViewModel: ViewModelType {
         let isConfirmButtonEnabled = input.projectName.map(validateName)
         let projectCreated = input.confirmTapped.withLatestFrom(input.projectName)
             .flatMapLatest { name in
-                return self.useCase.createProject(name: name)
+                return self.useCase.createProject(name: self.sanitizedName(name))
                     .mapToVoid()
                     .asDriverOnErrorJustComplete()
         }
@@ -46,7 +46,11 @@ struct CreateProjectViewModel: ViewModelType {
         )
     }
 
+    private func sanitizedName(_ name: String) -> String {
+        return name.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+
     private func validateName(_ name: String) -> Bool {
-        return !name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+        return !sanitizedName(name).isEmpty
     }
 }

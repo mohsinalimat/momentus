@@ -30,23 +30,36 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kga-so-Ahn" customClass="FABButon" customModule="Momentus" customModuleProvider="target">
-                                <rect key="frame" x="279" y="571" width="64" height="64"/>
+                                <rect key="frame" x="279" y="585" width="64" height="50"/>
                                 <state key="normal" image="ic_check_white"/>
+                                <state key="disabled" image="ic_check_white"/>
+                                <state key="selected" image="ic_check_white"/>
+                                <state key="highlighted" image="ic_check_white"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ta7-ud-wIY">
+                                <rect key="frame" x="24" y="129" width="327" height="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pZJ-PE-ahu" firstAttribute="top" secondItem="mM6-dv-vQA" secondAttribute="top" constant="48" id="08w-nK-2RD"/>
                             <constraint firstItem="pZJ-PE-ahu" firstAttribute="leading" secondItem="mM6-dv-vQA" secondAttribute="leading" constant="24" id="Jv9-Ne-Y5m"/>
                             <constraint firstItem="mM6-dv-vQA" firstAttribute="trailing" secondItem="pZJ-PE-ahu" secondAttribute="trailing" constant="24" id="Mms-My-uI2"/>
+                            <constraint firstItem="Ta7-ud-wIY" firstAttribute="leading" secondItem="pZJ-PE-ahu" secondAttribute="leading" id="SHA-tW-e2A"/>
+                            <constraint firstItem="Ta7-ud-wIY" firstAttribute="top" secondItem="pZJ-PE-ahu" secondAttribute="bottom" constant="22" id="ixK-I0-rOM"/>
                             <constraint firstItem="mM6-dv-vQA" firstAttribute="trailing" secondItem="kga-so-Ahn" secondAttribute="trailing" constant="32" id="jhL-dK-7Oy"/>
                             <constraint firstItem="mM6-dv-vQA" firstAttribute="bottom" secondItem="kga-so-Ahn" secondAttribute="bottom" constant="32" id="khA-yR-ryl"/>
+                            <constraint firstItem="Ta7-ud-wIY" firstAttribute="trailing" secondItem="pZJ-PE-ahu" secondAttribute="trailing" id="x0o-PZ-5X4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mM6-dv-vQA"/>
                     </view>
                     <connections>
                         <outlet property="confirmButton" destination="kga-so-Ahn" id="hnf-eb-Y3t"/>
                         <outlet property="confirmButtonBottomConstraint" destination="khA-yR-ryl" id="WpZ-3A-FPb"/>
+                        <outlet property="messageLabel" destination="Ta7-ud-wIY" id="rdY-nP-Dqi"/>
                         <outlet property="projectNameTextField" destination="pZJ-PE-ahu" id="FdS-Rk-MLk"/>
                     </connections>
                 </viewController>

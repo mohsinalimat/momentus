@@ -28,6 +28,8 @@ final class ListProjectsCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         bindViewModel()
 
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(handleAddProjectTap(_:)))
+        navigationItem.title = "Projects"
         collectionView?.refreshControl = refreshControl
     }
 
@@ -54,6 +56,11 @@ final class ListProjectsCollectionViewController: UICollectionViewController {
             .drive(onNext: { project in
                 print(project.name)
             }).disposed(by: disposeBag)
+    }
+
+    @objc private func handleAddProjectTap(_ sender: UIBarButtonItem) {
+        let createProjectViewController = CreateProjectViewController.instantiate()
+        navigationController?.pushViewController(createProjectViewController, animated: true)
     }
 
 }
