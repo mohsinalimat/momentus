@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1879A4011FD16DA3008144B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4001FD16DA3008144B2 /* AppDelegate.swift */; };
+		1879A4031FD16DA3008144B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4021FD16DA3008144B2 /* ViewController.swift */; };
+		1879A4061FD16DA3008144B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1879A4041FD16DA3008144B2 /* Main.storyboard */; };
+		1879A4081FD16DA3008144B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1879A4071FD16DA3008144B2 /* Assets.xcassets */; };
+		1879A40B1FD16DA3008144B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1879A4091FD16DA3008144B2 /* LaunchScreen.storyboard */; };
+		1879A4161FD16DA3008144B2 /* MomentusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4151FD16DA3008144B2 /* MomentusTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1879A4121FD16DA3008144B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1879A3F51FD16DA3008144B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1879A3FC1FD16DA3008144B2;
+			remoteInfo = Momentus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1879A3FD1FD16DA3008144B2 /* Momentus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Momentus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1879A4001FD16DA3008144B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1879A4021FD16DA3008144B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1879A4051FD16DA3008144B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1879A4071FD16DA3008144B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1879A40A1FD16DA3008144B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1879A40C1FD16DA3008144B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1879A4111FD16DA3008144B2 /* MomentusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MomentusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1879A4151FD16DA3008144B2 /* MomentusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentusTests.swift; sourceTree = "<group>"; };
+		1879A4171FD16DA3008144B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1879A3FA1FD16DA3008144B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1879A40E1FD16DA3008144B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1879A3F41FD16DA3008144B2 = {
+			isa = PBXGroup;
+			children = (
+				1879A3FF1FD16DA3008144B2 /* Momentus */,
+				1879A4141FD16DA3008144B2 /* MomentusTests */,
+				1879A3FE1FD16DA3008144B2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1879A3FE1FD16DA3008144B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1879A3FD1FD16DA3008144B2 /* Momentus.app */,
+				1879A4111FD16DA3008144B2 /* MomentusTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1879A3FF1FD16DA3008144B2 /* Momentus */ = {
+			isa = PBXGroup;
+			children = (
+				1879A4001FD16DA3008144B2 /* AppDelegate.swift */,
+				1879A4021FD16DA3008144B2 /* ViewController.swift */,
+				1879A4041FD16DA3008144B2 /* Main.storyboard */,
+				1879A4071FD16DA3008144B2 /* Assets.xcassets */,
+				1879A4091FD16DA3008144B2 /* LaunchScreen.storyboard */,
+				1879A40C1FD16DA3008144B2 /* Info.plist */,
+			);
+			path = Momentus;
+			sourceTree = "<group>";
+		};
+		1879A4141FD16DA3008144B2 /* MomentusTests */ = {
+			isa = PBXGroup;
+			children = (
+				1879A4151FD16DA3008144B2 /* MomentusTests.swift */,
+				1879A4171FD16DA3008144B2 /* Info.plist */,
+			);
+			path = MomentusTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1879A3FC1FD16DA3008144B2 /* Momentus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1879A41A1FD16DA3008144B2 /* Build configuration list for PBXNativeTarget "Momentus" */;
+			buildPhases = (
+				1879A3F91FD16DA3008144B2 /* Sources */,
+				1879A3FA1FD16DA3008144B2 /* Frameworks */,
+				1879A3FB1FD16DA3008144B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Momentus;
+			productName = Momentus;
+			productReference = 1879A3FD1FD16DA3008144B2 /* Momentus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1879A4101FD16DA3008144B2 /* MomentusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1879A41D1FD16DA3008144B2 /* Build configuration list for PBXNativeTarget "MomentusTests" */;
+			buildPhases = (
+				1879A40D1FD16DA3008144B2 /* Sources */,
+				1879A40E1FD16DA3008144B2 /* Frameworks */,
+				1879A40F1FD16DA3008144B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1879A4131FD16DA3008144B2 /* PBXTargetDependency */,
+			);
+			name = MomentusTests;
+			productName = MomentusTests;
+			productReference = 1879A4111FD16DA3008144B2 /* MomentusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1879A3F51FD16DA3008144B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Guilherme Souza";
+				TargetAttributes = {
+					1879A3FC1FD16DA3008144B2 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					1879A4101FD16DA3008144B2 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1879A3FC1FD16DA3008144B2;
+					};
+				};
+			};
+			buildConfigurationList = 1879A3F81FD16DA3008144B2 /* Build configuration list for PBXProject "Momentus" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1879A3F41FD16DA3008144B2;
+			productRefGroup = 1879A3FE1FD16DA3008144B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1879A3FC1FD16DA3008144B2 /* Momentus */,
+				1879A4101FD16DA3008144B2 /* MomentusTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1879A3FB1FD16DA3008144B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1879A40B1FD16DA3008144B2 /* LaunchScreen.storyboard in Resources */,
+				1879A4081FD16DA3008144B2 /* Assets.xcassets in Resources */,
+				1879A4061FD16DA3008144B2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1879A40F1FD16DA3008144B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1879A3F91FD16DA3008144B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1879A4031FD16DA3008144B2 /* ViewController.swift in Sources */,
+				1879A4011FD16DA3008144B2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1879A40D1FD16DA3008144B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1879A4161FD16DA3008144B2 /* MomentusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1879A4131FD16DA3008144B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1879A3FC1FD16DA3008144B2 /* Momentus */;
+			targetProxy = 1879A4121FD16DA3008144B2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1879A4041FD16DA3008144B2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1879A4051FD16DA3008144B2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1879A4091FD16DA3008144B2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1879A40A1FD16DA3008144B2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1879A4181FD16DA3008144B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1879A4191FD16DA3008144B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1879A41B1FD16DA3008144B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ELTTE7K8TT;
+				INFOPLIST_FILE = Momentus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.grsouza.Momentus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1879A41C1FD16DA3008144B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ELTTE7K8TT;
+				INFOPLIST_FILE = Momentus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.grsouza.Momentus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1879A41E1FD16DA3008144B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ELTTE7K8TT;
+				INFOPLIST_FILE = MomentusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.grsouza.MomentusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Momentus.app/Momentus";
+			};
+			name = Debug;
+		};
+		1879A41F1FD16DA3008144B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ELTTE7K8TT;
+				INFOPLIST_FILE = MomentusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.grsouza.MomentusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Momentus.app/Momentus";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1879A3F81FD16DA3008144B2 /* Build configuration list for PBXProject "Momentus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1879A4181FD16DA3008144B2 /* Debug */,
+				1879A4191FD16DA3008144B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1879A41A1FD16DA3008144B2 /* Build configuration list for PBXNativeTarget "Momentus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1879A41B1FD16DA3008144B2 /* Debug */,
+				1879A41C1FD16DA3008144B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1879A41D1FD16DA3008144B2 /* Build configuration list for PBXNativeTarget "MomentusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1879A41E1FD16DA3008144B2 /* Debug */,
+				1879A41F1FD16DA3008144B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1879A3F51FD16DA3008144B2 /* Project object */;
+}
