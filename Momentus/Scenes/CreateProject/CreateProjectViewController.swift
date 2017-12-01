@@ -15,6 +15,7 @@ final class CreateProjectViewController: UIViewController {
         static let messageAnimationDuration: TimeInterval = 0.5
         static let messageShowingStateDuration: TimeInterval = 2
         static let defaultConfirmButtonBottomMargin: CGFloat = 32
+        static let confirmButtonDisabledAlpha: CGFloat = 0.2
     }
 
     // MARK: Outlets
@@ -74,7 +75,7 @@ final class CreateProjectViewController: UIViewController {
         output.isConfirmButtonEnabled
             .drive(onNext: { [unowned self] isEnabled in
                 self.confirmButton.isEnabled = isEnabled
-                self.confirmButton.alpha = isEnabled ? 1 : 0.2
+                self.confirmButton.alpha = isEnabled ? 1 : Constants.confirmButtonDisabledAlpha
             })
             .disposed(by: disposeBag)
 
