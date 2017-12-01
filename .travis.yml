@@ -1,6 +1,8 @@
 language: objective-c
 xcode_project: Momentus.xcodeproj
 xcode_scheme: Momentus
+osx_image: xcode9.1
+xcode_sdk: iphonesimulator11.1
 
 cache:
     directories:
@@ -9,5 +11,5 @@ cache:
 before_install:
     - brew update
     - brew outdated carthage || brew upgrade carthage
-    - carthage bootstrap --verbose --no-use-binaries --platform iOS --cache-builds
+    - carthage bootstrap --no-use-binaries --platform iOS --cache-builds
 

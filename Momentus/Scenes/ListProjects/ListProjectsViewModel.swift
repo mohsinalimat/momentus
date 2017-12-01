@@ -13,6 +13,7 @@ import RxSwift
 struct ListProjectsViewModel: ViewModelType {
     struct Input {
         let viewWillAppear: Driver<Void>
+        let pullToRefresh: Driver<Void>
     }
     struct Output {
         let projects: Driver<[Project]>
@@ -25,9 +26,10 @@ struct ListProjectsViewModel: ViewModelType {
     }
 
     func transform(input: ListProjectsViewModel.Input) -> ListProjectsViewModel.Output {
-        let projects = input.viewWillAppear.flatMapLatest { _ in
-            return self.listProjectsUseCase.loadAllProjects()
-                .asDriverOnErrorJustComplete()
+        let projects = Driver.merge(input.viewWillAppear, input.pullToRefresh)
+            .flatMapLatest { _ in
+                return self.listProjectsUseCase.loadAllProjects()
+                    .asDriverOnErrorJustComplete()
         }
         return Output(projects: projects)
     }
