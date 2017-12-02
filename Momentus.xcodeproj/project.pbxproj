@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180859A41FD2C4B20027177F /* RxListAdapterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180859A31FD2C4B20027177F /* RxListAdapterDataSource.swift */; };
+		180859A61FD2C5310027177F /* IGListKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180859A51FD2C5310027177F /* IGListKit.framework */; };
+		180859A81FD2CBE20027177F /* ListProjectsSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180859A71FD2CBE20027177F /* ListProjectsSectionController.swift */; };
 		18290E771FD1B26E001DAA6F /* ListProjectsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18290E761FD1B26E001DAA6F /* ListProjectsCollectionViewController.swift */; };
 		18290E791FD1B2D4001DAA6F /* ListProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18290E781FD1B2D4001DAA6F /* ListProjectsViewModel.swift */; };
 		18290E7B1FD1B2DF001DAA6F /* ListProjectsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18290E7A1FD1B2DF001DAA6F /* ListProjectsUseCase.swift */; };
@@ -82,6 +85,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		180859A31FD2C4B20027177F /* RxListAdapterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxListAdapterDataSource.swift; sourceTree = "<group>"; };
+		180859A51FD2C5310027177F /* IGListKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IGListKit.framework; path = Carthage/Build/iOS/IGListKit.framework; sourceTree = "<group>"; };
+		180859A71FD2CBE20027177F /* ListProjectsSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProjectsSectionController.swift; sourceTree = "<group>"; };
 		18290E761FD1B26E001DAA6F /* ListProjectsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProjectsCollectionViewController.swift; sourceTree = "<group>"; };
 		18290E781FD1B2D4001DAA6F /* ListProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProjectsViewModel.swift; sourceTree = "<group>"; };
 		18290E7A1FD1B2DF001DAA6F /* ListProjectsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProjectsUseCase.swift; sourceTree = "<group>"; };
@@ -137,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180859A61FD2C5310027177F /* IGListKit.framework in Frameworks */,
 				1879A4231FD16F06008144B2 /* RealmSwift.framework in Frameworks */,
 				1879A4241FD16F06008144B2 /* Realm.framework in Frameworks */,
 				1879A4341FD174B6008144B2 /* RxRealm.framework in Frameworks */,
@@ -166,6 +173,7 @@
 				18290E7A1FD1B2DF001DAA6F /* ListProjectsUseCase.swift */,
 				18290E821FD1CC2E001DAA6F /* ListProjects.storyboard */,
 				18290E841FD1CC81001DAA6F /* ListProjectCollectionViewCell.swift */,
+				180859A71FD2CBE20027177F /* ListProjectsSectionController.swift */,
 			);
 			path = ListProjects;
 			sourceTree = "<group>";
@@ -206,6 +214,7 @@
 				1879A4521FD1820F008144B2 /* UIStoryboard.swift */,
 				1879A45E1FD1A0EA008144B2 /* ViewModelType.swift */,
 				18290E871FD1D34B001DAA6F /* Reusable.swift */,
+				180859A31FD2C4B20027177F /* RxListAdapterDataSource.swift */,
 			);
 			path = Momentus;
 			sourceTree = "<group>";
@@ -226,6 +235,7 @@
 		1879A4201FD16F06008144B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				180859A51FD2C5310027177F /* IGListKit.framework */,
 				1879A4641FD1A37C008144B2 /* Nimble.framework */,
 				1879A4651FD1A37C008144B2 /* Quick.framework */,
 				1879A4631FD1A37C008144B2 /* RxTest.framework */,
@@ -453,6 +463,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxRealm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/IGListKit.framework",
 			);
 			name = "Copy Carthage Frameworkds";
 			outputPaths = (
@@ -473,6 +484,7 @@
 				1879A4411FD175B6008144B2 /* RealmRepresentable.swift in Sources */,
 				1879A4551FD18463008144B2 /* RootViewController.swift in Sources */,
 				1879A4281FD16F7E008144B2 /* RMProject.swift in Sources */,
+				180859A41FD2C4B20027177F /* RxListAdapterDataSource.swift in Sources */,
 				1879A44D1FD17E1A008144B2 /* CreateProjectViewController.swift in Sources */,
 				18290E881FD1D34B001DAA6F /* Reusable.swift in Sources */,
 				1879A4301FD17461008144B2 /* RunLoopThreadScheduler.swift in Sources */,
@@ -484,6 +496,7 @@
 				1879A44A1FD17641008144B2 /* TimeEntry.swift in Sources */,
 				18290E851FD1CC81001DAA6F /* ListProjectCollectionViewCell.swift in Sources */,
 				1879A4431FD175F3008144B2 /* Repository.swift in Sources */,
+				180859A81FD2CBE20027177F /* ListProjectsSectionController.swift in Sources */,
 				1879A43F1FD175A7008144B2 /* DomainConvertibleType.swift in Sources */,
 				1879A4481FD17635008144B2 /* Task.swift in Sources */,
 				1879A42C1FD170BB008144B2 /* RMTimeEntry.swift in Sources */,

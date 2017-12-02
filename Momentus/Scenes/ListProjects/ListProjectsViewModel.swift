@@ -17,8 +17,8 @@ struct ListProjectsViewModel: ViewModelType {
         let selectItemAtIndex: Driver<Int>
     }
     struct Output {
-        let projects: Driver<[Project]>
-        let projectSelected: Driver<Project>
+        let projects: Driver<[ListProjectCollectionViewCell.ViewModel]>
+        let projectSelected: Driver<ListProjectCollectionViewCell.ViewModel>
     }
 
     private let listProjectsUseCase: ListProjectsUseCaseProvider
@@ -31,10 +31,11 @@ struct ListProjectsViewModel: ViewModelType {
         let projects = Driver.merge(input.viewWillAppear, input.pullToRefresh)
             .flatMapLatest { _ in
                 return self.listProjectsUseCase.loadAllProjects()
+                    .map { $0.map(ListProjectCollectionViewCell.ViewModel.init) }
                     .asDriverOnErrorJustComplete()
         }
 
-        let projectSelected = input.selectItemAtIndex.withLatestFrom(projects) { (index, projects) -> Project in
+        let projectSelected = input.selectItemAtIndex.withLatestFrom(projects) { (index, projects) -> ListProjectCollectionViewCell.ViewModel in
             return projects[index]
         }
 

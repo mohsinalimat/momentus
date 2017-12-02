@@ -8,13 +8,19 @@
 
 import UIKit
 import RxSwift
+import IGListKit
+import RxCocoa
 
 final class ListProjectsCollectionViewController: UICollectionViewController {
 
+    private lazy var refreshControl: UIRefreshControl = UIRefreshControl()
+    private lazy var adapter: ListAdapter = {
+        return ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 2)
+    }()
+
     private var viewModel: ListProjectsViewModel!
     private let disposeBag = DisposeBag()
-
-    private lazy var refreshControl: UIRefreshControl = UIRefreshControl()
+    private let dataSource = DataSource()
 
     static func instantiate() -> UIViewController {
         guard let controller = UIStoryboard.listProjects.instantiateInitialViewController() as? ListProjectsCollectionViewController else {
@@ -31,6 +37,9 @@ final class ListProjectsCollectionViewController: UICollectionViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(handleAddProjectTap(_:)))
         navigationItem.title = "Projects"
         collectionView?.refreshControl = refreshControl
+        adapter.collectionView = collectionView
+        adapter.rx.setDataSource(dataSource)
+            .disposed(by: disposeBag)
     }
 
     private func bindViewModel() {
@@ -44,12 +53,7 @@ final class ListProjectsCollectionViewController: UICollectionViewController {
 
         output.projects
             .do(onNext: { _ in self.refreshControl.endRefreshing() })
-            .drive(collectionView!.rx.items) { (collectionView, row, element) in
-                let indexPath = IndexPath(item: row, section: 0)
-                let cell = collectionView.dequeueReusableCell(of: ListProjectCollectionViewCell.self, for: indexPath)
-                cell.configure(with: element)
-                return cell
-            }
+            .drive(adapter.rx.item(dataSource: dataSource))
             .disposed(by: disposeBag)
 
         output.projectSelected
@@ -61,6 +65,41 @@ final class ListProjectsCollectionViewController: UICollectionViewController {
     @objc private func handleAddProjectTap(_ sender: UIBarButtonItem) {
         let createProjectViewController = CreateProjectViewController.instantiate()
         navigationController?.pushViewController(createProjectViewController, animated: true)
+    }
+
+    final class DataSource: NSObject, RxListAdapterDataSource, ListAdapterDataSource, ListProjectSectionControllerDelegate {
+        typealias Element = [ListProjectCollectionViewCell.ViewModel]
+
+        private var elements: Element = []
+
+        func listAdapter(_ adapter: ListAdapter, observedElements: Event<[ListProjectCollectionViewCell.ViewModel]>) {
+            if case .next(let projects) = observedElements {
+                elements = projects
+                adapter.performUpdates(animated: true)
+            }
+        }
+
+        func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
+            return elements
+        }
+
+        func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
+            return ListProjectSectionController(delegate: self)
+        }
+
+        func emptyView(for listAdapter: ListAdapter) -> UIView? {
+            return nil
+        }
+
+        var selectedItem: Driver<ListProjectCollectionViewCell.ViewModel> {
+            return selectedItemProperty.asDriverOnErrorJustComplete()
+        }
+
+        private let selectedItemProperty = PublishSubject<ListProjectCollectionViewCell.ViewModel>()
+        func didSelect(item: ListProjectCollectionViewCell.ViewModel) {
+            selectedItemProperty.onNext(item)
+        }
+
     }
 
 }
